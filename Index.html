@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMW Car Information</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#111;
+color:white;
+text-align:center;
+margin:0;
+}
+
+header{
+background:black;
+padding:20px;
+font-size:30px;
+color:#00aaff;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.car{
+background:#1e1e1e;
+border-radius:10px;
+width:300px;
+padding:15px;
+}
+
+.car img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#00ff88;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>BMW Car Showroom</header>
+
+<div class="container">
+
+<div class="car">
+<h2>BMW M4</h2>
+<img id="m4slider" src="images/m4.jpg">
+<p>Engine: 3.0L Twin Turbo</p>
+<p>Top Speed: 290 km/h</p>
+<p class="price">Price: ₹1.5 Crore</p>
+</div>
+
+<div class="car">
+<h2>BMW X5</h2>
+<img id="x5slider" src="images/x5.jpg">
+<p>Engine: 3.0L Turbo</p>
+<p>Top Speed: 243 km/h</p>
+<p class="price">Price: ₹96 Lakh</p>
+</div>
+
+<div class="car">
+<h2>BMW M5</h2>
+<img id="m5slider" src="images/m5.jpg">
+<p>Engine: 4.4L V8 Twin Turbo</p>
+<p>Top Speed: 305 km/h</p>
+<p class="price">Price: ₹1.74 Crore</p>
+</div>
+
+<div class="car">
+<h2>BMW i8</h2>
+<img id="i8slider" src="images/i8.jpg">
+<p>Engine: Hybrid</p>
+<p>Top Speed: 250 km/h</p>
+<p class="price">Price: ₹2.62 Crore</p>
+</div>
+
+<div class="car">
+<h2>BMW X7</h2>
+<img id="x7slider" src="images/x7.jpg">
+<p>Engine: 3.0L Turbo</p>
+<p>Top Speed: 245 km/h</p>
+<p class="price">Price: ₹1.3 Crore</p>
+</div>
+
+<div class="car">
+<h2>BMW Z4</h2>
+<img id="z4slider" src="images/z4.jpg">
+<p>Engine: 3.0L Turbo</p>
+<p>Top Speed: 250 km/h</p>
+<p class="price">Price: ₹90 Lakh</p>
+</div>
+
+</div>
+
+<script>
+
+function slider(id,images){
+let index=0
+setInterval(function(){
+index++
+if(index>=images.length) index=0
+document.getElementById(id).src=images[index]
+},3000)
+}
+
+slider("m4slider",["images/m4.jpg","images/m4-2.jpg"])
+slider("x5slider",["images/x5.jpg","images/x5-2.jpg"])
+slider("m5slider",["images/m5.jpg","images/m5-2.jpg"])
+slider("i8slider",["images/i8.jpg","images/i8-2.jpg"])
+slider("x7slider",["images/x7.jpg","images/x7-2.jpg"])
+slider("z4slider",["images/z4.jpg","images/z4-2.jpg"])
+
+</script>
+
+</body>
+</html>
